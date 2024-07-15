@@ -7,11 +7,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface StudentService {
+
     StudentEntity save(StudentDto studentDto);
 
-    List<StudentEntity> findAll();
+    List<StudentDto> findAll();
 
-    Optional<StudentEntity> findById(Long id);
+    Optional<StudentDto> findById(Long id);
 
     void deleteById(Long id);
 }

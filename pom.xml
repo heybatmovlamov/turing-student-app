@@ -36,8 +36,14 @@
         <dependency>
         <groupId>org.mapstruct</groupId>
         <artifactId>mapstruct</artifactId>
-        <version>1.4.2.Final</version> <!-- Kütüphane versiyonu -->
+        <version>1.4.2.Final</version>
     </dependency>
+                    <!-- Swagger -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.3</version>
+        </dependency>
     </dependencies>
 
     <build>

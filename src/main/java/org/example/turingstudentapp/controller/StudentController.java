@@ -3,6 +3,7 @@ package org.example.turingstudentapp.controller;
 import lombok.RequiredArgsConstructor;
 import org.example.turingstudentapp.domain.dto.StudentDto;
 import org.example.turingstudentapp.domain.entity.StudentEntity;
+import org.example.turingstudentapp.exception.StudentNotFoundException;
 import org.example.turingstudentapp.service.StudentService;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,12 +22,12 @@ public class StudentController {
     }
 
     @GetMapping
-    public List<StudentEntity> findAll(){
+    public List<StudentDto> findAll(){
         return studentService.findAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<StudentEntity> findById(@PathVariable Long id){
+    public Optional<StudentDto> findById(@PathVariable Long id){
         return studentService.findById(id);
     }
 
